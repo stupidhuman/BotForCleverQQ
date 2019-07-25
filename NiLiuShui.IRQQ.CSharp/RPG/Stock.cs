@@ -14,6 +14,9 @@ namespace NiLiuShui.IRQQ.CSharp.RPG
         public static int buyingPeople;
         public static int salingPeople;
         //public static System.Threading.Timer timer = new System.Threading.Timer();
+        /// <summary>
+        /// 股票
+        /// </summary>
         public static void StockPriceWithTime()
         {
             Random random = new Random();

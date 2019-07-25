@@ -8,6 +8,11 @@ namespace NiLiuShui.IRQQ.CSharp.RPG
 {
     public class SkillAttack
     {
+        /// <summary>
+        /// 发动偷窃技能
+        /// </summary>
+        /// <param name="qqid"></param>
+        /// <returns></returns>
         public static ThiefAttack ThiefSkillAttack(string qqid)
         {
             SkillThief skillThief = new SkillThief();

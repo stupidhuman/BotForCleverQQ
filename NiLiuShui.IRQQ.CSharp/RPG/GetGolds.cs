@@ -9,7 +9,7 @@ namespace NiLiuShui.IRQQ.CSharp
     public class GetGolds
     {
         /// <summary>
-        /// 
+        /// 发言获得金币
         /// </summary>
         /// <param name="qqid">qq号</param>
         /// <returns></returns>
@@ -63,7 +63,11 @@ namespace NiLiuShui.IRQQ.CSharp
 
             return -1;
         }
-
+        /// <summary>
+        /// 发言获得技能
+        /// </summary>
+        /// <param name="qqid"></param>
+        /// <returns></returns>
         public static SkillThief DefaultGetSkill(string qqid)
         {
             SkillThief skillThief = new SkillThief();

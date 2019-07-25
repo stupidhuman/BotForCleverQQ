@@ -17,7 +17,13 @@ namespace NiLiuShui.IRQQ.CSharp
         static short dbPort = 3306;
         static string dbFile = "";
         public static string logfile = "log.txt";
-
+        /// <summary>
+        /// 新建人物
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <param name="newGold"></param>
+        /// <param name="newLucky"></param>
+        /// <returns></returns>
         public static bool AddGoldToDB(string QQID, int newGold,int newLucky)
         {
             DataBase.MySqlUtil mySqlUtil = new DataBase.MySqlUtil();
@@ -40,7 +46,11 @@ namespace NiLiuShui.IRQQ.CSharp
                 return false;
             }
         }
-
+        /// <summary>
+        /// 查询余额
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <returns></returns>
         public static int SearchGoldFromDB(string QQID)
         {
             IRQQUtil.WritePluginLogFile(logfile, "\n开始查询" + DateTime.Now);
@@ -73,7 +83,13 @@ namespace NiLiuShui.IRQQ.CSharp
                 return -2;
             }
         }
-
+        /// <summary>
+        /// 更新余额
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <param name="oldGold"></param>
+        /// <param name="newGold"></param>
+        /// <returns></returns>
         public static bool UpdateGoldToDB(string QQID, int oldGold, int newGold)
         {
             DataBase.MySqlUtil mySqlUtil = new DataBase.MySqlUtil();
@@ -93,7 +109,12 @@ namespace NiLiuShui.IRQQ.CSharp
                 return false;
             }
         }
-
+        /// <summary>
+        /// 更新幸运值
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <param name="newLucky"></param>
+        /// <returns></returns>
         public static bool UpdateLuckyToDB(string QQID, int newLucky)
         {
             DataBase.MySqlUtil mySqlUtil = new DataBase.MySqlUtil();
@@ -112,7 +133,11 @@ namespace NiLiuShui.IRQQ.CSharp
                 return false;
             }
         }
-
+        /// <summary>
+        /// 查询幸运值
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <returns></returns>
         public static int SearchLuckyFromDB(string QQID)
         {
             IRQQUtil.WritePluginLogFile(logfile, "\n开始查询" + DateTime.Now);
@@ -243,7 +268,11 @@ namespace NiLiuShui.IRQQ.CSharp
                 return false;
             }
         }
-
+        /// <summary>
+        /// 查询是否有技能
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <returns></returns>
         public static SkillThief SearchSkillThiefFromDB(string QQID)
         {
             IRQQUtil.WritePluginLogFile(logfile, "\n开始查询" + DateTime.Now);
@@ -283,7 +312,14 @@ namespace NiLiuShui.IRQQ.CSharp
                 return null;
             }
         }
-
+        /// <summary>
+        /// 更新技能数值
+        /// </summary>
+        /// <param name="QQID"></param>
+        /// <param name="skillChance"></param>
+        /// <param name="effLower"></param>
+        /// <param name="effUpper"></param>
+        /// <returns></returns>
         public static bool UpdateSkillThiefToDB(string QQID, int skillChance, int effLower, int effUpper)
         {
             DataBase.MySqlUtil mySqlUtil = new DataBase.MySqlUtil();
@@ -306,7 +342,11 @@ namespace NiLiuShui.IRQQ.CSharp
                 return false;
             }
         }
-
+        /// <summary>
+        /// 查询余额大于某值的人员列表
+        /// </summary>
+        /// <param name="goldNum"></param>
+        /// <returns></returns>
         public static List<string> SearchGoldListFromDB(int goldNum)
         {
             IRQQUtil.WritePluginLogFile(logfile, "\n开始查询" + DateTime.Now);
@@ -346,7 +386,9 @@ namespace NiLiuShui.IRQQ.CSharp
                 return null;
             }
         }
-
+        /// <summary>
+        /// 测试发工资用
+        /// </summary>
         public static void GiveGold()
         {
             DataBase.MySqlUtil mySqlUtil = new DataBase.MySqlUtil();
